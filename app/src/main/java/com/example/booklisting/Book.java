@@ -8,15 +8,15 @@ public class Book {
 
     private String mAuthor;
 
-    private double mPrice;
+    private long mPages;
 
     private String mUrl;
 
-    public Book(String imageUrl, String title, String author, double price, String url){
+    public Book(String imageUrl, String title, String author, long pages, String url){
         mImageUrl = imageUrl;
         mTitle = title;
         mAuthor = author;
-        mPrice = price;
+        mPages = pages;
         mUrl = url;
     }
 
@@ -32,8 +32,8 @@ public class Book {
         return mAuthor;
     }
 
-    public double getPrice() {
-        return mPrice;
+    public long getPages() {
+        return mPages;
     }
 
     public String getUrl() {

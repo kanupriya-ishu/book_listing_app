@@ -126,14 +126,13 @@ public final class QueryUtils {
 
                 String authors = volumeInfo.getJSONArray("authors").toString();
 
-                JSONObject saleInfo = volumeInfo.getJSONObject("saleInfo");
-                JSONObject retailPrice = volumeInfo.getJSONObject("retailPrice");
-                double amount = retailPrice.getDouble("amount");
+                long pageCount = volumeInfo.getLong("pageCount");
 
                 String infoLink = volumeInfo.getString("infoLink");
 
-                Book book = new Book(smallThumbnail, title, authors, amount, infoLink);
+                Book book = new Book(smallThumbnail, title, authors, pageCount, infoLink);
                 books.add(book);
+                Log.i(LOG_TAG, i+title);
 
             }
 
